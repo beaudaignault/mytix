@@ -87,7 +87,8 @@ add_action( 'after_setup_theme', 'mtx_setup' );
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
- *
+ * Only affect content coming from outside (videos, etc.). 
+ * 
  * @global int $content_width
  */
 function mtx_content_width() {
@@ -117,6 +118,10 @@ add_action( 'widgets_init', 'mtx_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mtx_scripts() {
+
+	//	Add Google fonts Roboto, and Yanone Kaffeesatz.
+	wp_enqueue_style( 'mtx-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,400i|Yanone+Kaffeesatz:300,400,700' );
+
 	wp_enqueue_style( 'mtx-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'mtx-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -128,6 +133,11 @@ function mtx_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mtx_scripts' );
+
+/**
+ * Add Google fonts.
+ */
+
 
 /**
  * Implement the Custom Header feature.
