@@ -118,6 +118,22 @@ function mtx_fonts_url() {
 	return esc_url_raw( $fonts_url );
 }
 
+// Hint for font urls, per twentyseventeen
+
+function mtx_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'mtx-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+		$urls[] = array(
+			'href' => 'https://fonts.gstatic.com',
+			'crossorigin',
+		);
+	}
+
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'mtx_resource_hints', 10, 2 );
+
+
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
