@@ -83,12 +83,47 @@ if ( ! function_exists( 'mtx_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'mtx_setup' );
 
+function mtx_fonts_url() {
+	$fonts_url = '';
+
+	/*
+	 * Translators: If there are characters in your language that are not
+	 * supported by Roboto and Open Sans translate, this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$roboto = _x( 'on', 'Roboto font: on or off', 'mtx' );
+
+	$open_sans = _x( 'on', 'Open Sans font: on or off', 'mtx' );
+
+	$font_families = array();
+
+	if ( 'off' !== $roboto ) {
+		$font_families[] = 'Roboto:400,700';
+	}
+
+	if ( 'off' !== $open_sans ) {
+		$font_families[] = 'Open Sans:400,400i,700';
+	}
+
+	if ( in_array('on', array( $roboto, $open_sans) ) ) {
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return esc_url_raw( $fonts_url );
+}
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
- * Only affect content coming from outside (videos, etc.). 
- * 
+ * Only affects content coming from outside (videos, etc.).
+ *
  * @global int $content_width
  */
 function mtx_content_width() {
@@ -120,7 +155,7 @@ add_action( 'widgets_init', 'mtx_widgets_init' );
 function mtx_scripts() {
 
 	//	Add Google fonts Roboto, and Yanone Kaffeesatz.
-	wp_enqueue_style( 'mtx-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,400i|Yanone+Kaffeesatz:300,400,700' );
+	wp_enqueue_style( 'mtx-fonts', mtx_fonts_url() );
 
 	wp_enqueue_style( 'mtx-style', get_stylesheet_uri() );
 
