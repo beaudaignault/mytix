@@ -118,7 +118,7 @@ function mtx_fonts_url() {
 	return esc_url_raw( $fonts_url );
 }
 
-// Hint for font urls, per twentyseventeen
+// Add preconnect for Google Fonts, per twentyseventeen
 
 function mtx_resource_hints( $urls, $relation_type ) {
 	if ( wp_style_is( 'mtx-fonts', 'queue' ) && 'preconnect' === $relation_type ) {

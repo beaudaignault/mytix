@@ -6,8 +6,11 @@ optgroup,
 textarea {
 	color: $color__text-main;
 	font-family: $font__body;
-	@include font-size(1);
+	@include font-size(.9); // equal to 18px below screens size of 700px 
 	line-height: $font__line-height-body;
+	@media screen and (min-width: 700px) {
+		@include font-size(1); // equal to 20px above screens size of 700px 
+	}
 }
 
 @import "headings";
