@@ -4,7 +4,6 @@
  *
  * You can add an optional custom header image to header.php like so ...
  *
-	<?php the_header_image_tag(); ?>
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
@@ -19,8 +18,8 @@
 function mtx_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'mtx_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
+		'default-text-color'     => 'ffffff',
+		'width'                  => 2000,
 		'height'                 => 250,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'mtx_header_style',

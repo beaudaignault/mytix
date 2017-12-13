@@ -23,7 +23,11 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mtx' ); ?></a>
-
+	<?php if ( get_header_image()) : ?>
+		<figure class="header-image">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php the_header_image_tag(); ?></a>
+		</figure> <!--  header image -->
+	<?php endif; ?>
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php

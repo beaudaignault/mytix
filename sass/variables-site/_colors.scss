@@ -1,19 +1,20 @@
+$color__skin: #32425a; //Header, &cetera
+$color__interactive: #b51c35;
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
-$color__background-button: #e6e6e6;
+$color__background-button: transparent;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
-
-$color__text-screen: #21759b;
+$color__text-main: red;
+$color__text-screen: #000;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
-$color__text-main: #404040;
-
-$color__border-button: #ccc #ccc #bbb;
+$color__link: rgb(141, 42, 42);
+$color__link-visited: #000;
+$color__link-hover: $color__interactive;
+$color__text-main: #000;
+$color__border-button: #000;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;

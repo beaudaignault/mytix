@@ -421,7 +421,7 @@ img {
 }
 
 figure {
-	margin: 1em 0;
+	margin: 0;
 	/* Extra wide images within figure tags don't overflow the content area. */
 }
 
@@ -728,18 +728,6 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget {
-	margin: 0 0 1.5em;
-	/* Make sure select elements fit in widgets. */
-}
-
-.widget select {
-	max-width: 100%;
-}
-
-/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -820,7 +808,7 @@ a:hover, a:active {
 	padding: 1em;
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	color: #fff;
-	background-color: #002255;
+	background-color: #32425a;
 }
 
 @media screen and (min-width: 600px) {
@@ -1210,6 +1198,18 @@ button.dropdown-toggle {
 
 .bypostauthor {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
 }
 
 /*--------------------------------------------------------------
