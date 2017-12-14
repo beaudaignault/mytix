@@ -1,9 +1,9 @@
 .main-navigation {
 	display: block;
-	
 	font-family: $font__headings;
 	font-weight: 400;
 	clear: left;
+	align-self: center;
 	
 	ul {
 		display: none;
@@ -50,19 +50,21 @@
 		width: 100%;
 		padding: .5em 1em .5em 0;
 		text-decoration: none;
+		text-transform: capitalize;
 		color: #fff;
 	}
 	
 	a:hover,
 	a:focus {
 		text-decoration: underline;
+		background-color: orangered;
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		// background-color: lightblue;
+		background-color: rgb(38, 100, 119);
 	}
 	
 	.menu-item-has-children,

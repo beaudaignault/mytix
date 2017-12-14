@@ -822,6 +822,9 @@ a:hover, a:active {
 	display: -ms-flexbox;
 	display: flex;
 	min-height: 65px;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .site-branding .custom-logo-link {
@@ -849,7 +852,7 @@ a:hover, a:active {
 }
 
 .site-title {
-	margin: 0;
+	margin: 0 .5em 0 0;
 	padding: 0;
 	font-size: 1.6em;
 	font-weight: 900;
@@ -897,6 +900,9 @@ a:hover, a:active {
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
 	font-weight: 400;
 	clear: left;
+	-ms-flex-item-align: center;
+	    -ms-grid-row-align: center;
+	    align-self: center;
 }
 
 .main-navigation ul {
@@ -944,12 +950,21 @@ a:hover, a:active {
 	width: 100%;
 	padding: .5em 1em .5em 0;
 	text-decoration: none;
+	text-transform: capitalize;
 	color: #fff;
 }
 
 .main-navigation a:hover,
 .main-navigation a:focus {
 	text-decoration: underline;
+	background-color: orangered;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+	background-color: #266477;
 }
 
 .main-navigation .menu-item-has-children,
