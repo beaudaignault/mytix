@@ -74,8 +74,8 @@ if ( ! function_exists( 'mtx_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 150,
+			'width'       => 150,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -175,7 +175,12 @@ function mtx_scripts() {
 
 	wp_enqueue_style( 'mtx-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'mtx-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'mtx-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+
+	wp_localize_script( 'mtx-navigation','mtxScreenReaderText', array(
+		'expand' => __( 'Expand child menu', 'mtx' ),
+		'collapse' => __( 'Collapse child menu', 'mtx' ),
+	));
 
 	wp_enqueue_script( 'mtx-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -184,11 +189,6 @@ function mtx_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mtx_scripts' );
-
-/**
- * Add Google fonts.
- */
-
 
 /**
  * Implement the Custom Header feature.

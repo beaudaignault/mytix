@@ -9,7 +9,7 @@
 
 .site-header {
 	position: relative;
-	padding: 1em;
+	padding: .25em 1em;
 	font-family: $font__body;
 	color: #fff;
 	background-color: $color__skin;
@@ -25,9 +25,10 @@
 	
 	.custom-logo-link {
 		margin-right: 1em;
+		// flex-shrink: inherit;
 		img {
 			display: block;
-			height: 65px;
+			height: 100px;
 			width: auto;
 		}
 	}
