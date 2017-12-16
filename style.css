@@ -1149,6 +1149,69 @@ button.dropdown-toggle {
 }
 
 /*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+.footer-navigation ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	color: white;
+}
+
+.footer-navigation ul li {
+	grid-gap: 10px;
+	margin-right: 1.5em;
+}
+
+.footer-navigation ul li a {
+	color: white;
+}
+
+#social-menu svg {
+	margin: 0 .25em;
+	color: white;
+}
+
+.footer-navigation {
+	position: relative;
+	padding: .25em 1em;
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+	color: #fff;
+	background-color: #32425a;
+}
+
+@media screen and (min-width: 600px) {
+	.footer-navigation {
+		padding: 1em 2em;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.menu-toggle {
+		display: none;
+	}
+	.footer-navigation ul {
+		display: block;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		list-style: none;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.footer-navigation ul {
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+		padding-top: 0;
+		list-style: none;
+	}
+}
+
+/*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget {

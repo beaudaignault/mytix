@@ -45,6 +45,7 @@ if ( ! function_exists( 'mtx_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'mtx' ),
+			'social-menu' => esc_html__( 'Social Menu', 'mtx' ),
 		) );
 
 		/*
@@ -170,10 +171,12 @@ add_action( 'widgets_init', 'mtx_widgets_init' );
  */
 function mtx_scripts() {
 
-	//	Add Google fonts Roboto, and Yanone Kaffeesatz.
+	//	Add Google fonts Roboto, and Open Sans.
 	wp_enqueue_style( 'mtx-fonts', mtx_fonts_url() );
 
 	wp_enqueue_style( 'mtx-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'mtx-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20170712', true );
 
 	wp_enqueue_script( 'mtx-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
 
@@ -189,6 +192,14 @@ function mtx_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mtx_scripts' );
+
+// adding daishicons to frontend
+//Enqueue the Dashicons script
+add_action( 'wp_enqueue_scripts', 'mtx_dashicons_front_end' );
+function mtx_dashicons_front_end() {
+wp_enqueue_style( 'dashicons' );
+}
+
 
 /**
  * Implement the Custom Header feature.
