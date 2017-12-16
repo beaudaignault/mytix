@@ -1151,44 +1151,76 @@ button.dropdown-toggle {
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
-.footer-navigation ul {
+footer {
+	background-color: #32425a;
+}
+
+footer nav {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	color: white;
+	min-height: 65px;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	position: relative;
+	text-transform: capitalize;
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	color: #fff;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.footer-navigation ul {
+	margin: 0;
+	padding: 0;
 }
 
 .footer-navigation ul li {
-	grid-gap: 10px;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
+	-ms-flex-line-pack: center;
+	    align-content: center;
 	margin-right: 1.5em;
 }
 
 .footer-navigation ul li a {
 	color: white;
+	text-decoration: none;
+}
+
+.footer-navigation ul li a:hover, .footer-navigation ul li a:focus {
+	text-decoration: underline;
 }
 
 #social-menu svg {
-	margin: 0 .25em;
-	color: white;
+	margin: 0 auto;
+	color: #f5ecec;
 }
 
-.footer-navigation {
-	position: relative;
-	padding: .25em 1em;
-	font-family: "Roboto", Arial, Helvetica, sans-serif;
-	color: #fff;
-	background-color: #32425a;
-}
-
-@media screen and (min-width: 600px) {
-	.footer-navigation {
-		padding: 1em 2em;
-	}
+#social-menu .svg-inline--fa {
+	display: block;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	font-size: 2em;
+	margin-top: .5em;
 }
 
 @media screen and (min-width: 600px) {
 	.menu-toggle {
 		display: none;
+	}
+	footer nav {
+		max-width: 44%;
 	}
 	.footer-navigation ul {
 		display: block;
@@ -1201,11 +1233,17 @@ button.dropdown-toggle {
 	}
 }
 
+.menu-social-links-menu-container {
+	-ms-flex-item-align: end;
+	    align-self: flex-end;
+	width: 100%;
+}
+
 @media screen and (min-width: 900px) {
 	.footer-navigation ul {
-		-webkit-box-pack: end;
-		    -ms-flex-pack: end;
-		        justify-content: flex-end;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 		padding-top: 0;
 		list-style: none;
 	}
