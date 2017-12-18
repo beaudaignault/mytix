@@ -24,7 +24,6 @@
 		</nav><!--  footer nav -->
 
 		<div class="site-info">
-			<span class="sep"> | </span>
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'mtx' ), 'mtx', '<a href="http://littlehou.se">Beau Daignault</a>' );

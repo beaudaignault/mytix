@@ -49,13 +49,6 @@ if ( ! function_exists( 'mtx_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'mtx' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'mtx' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
-
-			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'mtx' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
@@ -100,3 +93,17 @@ if ( ! function_exists( 'mtx_entry_footer' ) ) :
 		);
 	}
 endif;
+
+/** 
+ * My Tix catagories
+ */
+
+function mtx_the_category_list() {
+	 /* translators: used between list items, there is a space after the comma */
+	$categories_list = get_the_category_list( esc_html__( ', ', 'mtx' ) );
+	if ( $categories_list ) {
+		/* translators: 1: list of categories. */
+		printf( '<span class="cat-links">' . esc_html__( '%1$s Ticket', 'mtx' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+	}
+}
+
