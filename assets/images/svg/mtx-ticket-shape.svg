@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 603.09 317.85">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffffff;
+      }
+    </style>
+  </defs>
+  <title>mtx-ticket-shape</title>
+
+      <g id="blank_ticket" clipPathUnits="objectBoundingBox" tranform="scale(0.001658127311015 0.003146138115463)" data-name="blank ticket">
+        <path class="cls-1" d="M599.09,4V121.58h-8.82a37.35,37.35,0,1,0,0,74.69h8.82V313.85H4V196.27h8.82a37.35,37.35,0,1,0,0-74.69H4V4H599.09m4-4H0V125.58H12.82a33.35,33.35,0,1,1,0,66.69H0V317.85H603.09V192.27H590.27a33.35,33.35,0,1,1,0-66.69h12.82V0Z"/>
+        <path class="cls-1" d="M590.27,112.76V12.82H12.82v99.94a46.17,46.17,0,1,1,0,92.33V305H590.27V205.09a46.17,46.17,0,1,1,0-92.33Z"/>
+      </g>
+ 
+</svg>

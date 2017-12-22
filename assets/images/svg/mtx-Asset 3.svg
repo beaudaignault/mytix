@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="577.45" height="292.21" viewBox="0 0 577.45 292.21">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #231f20;
+      }
+    </style>
+  </defs>
+  <title>mtx-Asset 3</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_4" data-name="Layer 4">
+      <g id="ticket-shape">
+        <path class="cls-1" d="M577.45,99.94V0H0V99.94A46.17,46.17,0,0,1,46.17,146.1,46.17,46.17,0,0,1,0,192.27v99.94H577.45V192.27a46.17,46.17,0,1,1,0-92.33Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -179,7 +179,12 @@ function mtx_scripts() {
 	wp_enqueue_script( 'mtx-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20170712', true );
 
 	wp_enqueue_script( 'mtx-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
-
+	
+	if ( is_singular() ) {
+		wp_enqueue_style( 'mtx-jquery-ui-css', get_template_directory_uri() . '/js/jquery/jquery-ui.min.css');
+		wp_enqueue_script( 'mtx-jquery-ui', get_template_directory_uri() . '/js/jquery/jquery-ui.min.js', array('jquery'), '20151215', true );
+	//	wp_enqueue_script( 'mtx-jquery-theme-ui', get_template_directory_uri() . '/js/jquery/jquery-ui.min.js', array('jquery'), '20151215', true );
+	}
 	wp_localize_script( 'mtx-navigation','mtxScreenReaderText', array(
 		'expand' => __( 'Expand child menu', 'mtx' ),
 		'collapse' => __( 'Collapse child menu', 'mtx' ),
@@ -200,6 +205,16 @@ function mtx_dashicons_front_end() {
 wp_enqueue_style( 'dashicons' );
 }
 
+
+function mtx_add_custom_types( $query ) {
+	if( (is_category() || is_tag()) && $query->is_archive() && empty( $query->query_vars['suppress_filters'] ) ) {
+	  $query->set( 'post_type', array(
+	   'post', 'movies', 'live-events', 'attractions', 'sundry'
+		  ));
+	  }
+	  return $query;
+  }
+  add_filter( 'pre_get_posts', 'mtx_add_custom_types' );
 
 /**
  * Implement the Custom Header feature.

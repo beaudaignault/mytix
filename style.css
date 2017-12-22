@@ -387,8 +387,18 @@ hr {
 	margin-bottom: 1.5em;
 }
 
+ul.ticket-meta-primary {
+	margin: 0 0 0 0;
+	padding-left: 1.2em;
+	color: darkslategrey;
+}
+
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 0 0;
+}
+
+.entry-meta ul {
+	list-style: none;
 }
 
 ul {
@@ -1249,6 +1259,16 @@ footer nav {
 	}
 }
 
+.site-info, .site-info a {
+	font-size: small;
+	color: grey;
+}
+
+.site-info {
+	margin-right: 20px;
+	margin-top: 1.2em;
+}
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -1370,6 +1390,19 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+## Figures > image
+--------------------------------------------------------------*/
+.featured-cropped {
+	width: 25%;
+	background-color: #32425a;
+}
+
+.featured-cropped img {
+	-webkit-mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/contain no-repeat;
+	        mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/contain no-repeat;
 }
 
 /*# sourceMappingURL=../mtx/sass/maps/style.css.map */

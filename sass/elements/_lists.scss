@@ -1,7 +1,16 @@
-ul, ol {
-	margin: 0 0 1.5em 3em;
-}
+// Custom ticket meta
 
+ul.ticket-meta-primary {
+	margin: 0 0 0 0;
+	padding-left:1.2em;
+	color:darkslategrey;
+ }
+ul, ol {
+	 margin: 0 0 0 0;
+}
+.entry-meta ul {
+	list-style: none;
+}
 ul {
 	list-style: disc;
 }
@@ -23,3 +32,4 @@ dt {
 dd {
 	margin: 0 1.5em 1.5em;
 }
+
