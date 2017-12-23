@@ -181,9 +181,12 @@ function mtx_scripts() {
 	wp_enqueue_script( 'mtx-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
 	
 	if ( is_singular() ) {
+
 		wp_enqueue_style( 'mtx-jquery-ui-css', get_template_directory_uri() . '/js/jquery/jquery-ui.min.css');
+
 		wp_enqueue_script( 'mtx-jquery-ui', get_template_directory_uri() . '/js/jquery/jquery-ui.min.js', array('jquery'), '20151215', true );
-	//	wp_enqueue_script( 'mtx-jquery-theme-ui', get_template_directory_uri() . '/js/jquery/jquery-ui.min.js', array('jquery'), '20151215', true );
+		
+		wp_enqueue_script( 'mtx-accordion-ui', get_template_directory_uri() . '/js/accordion-functions.js', array('jquery'), '20151215', true );
 	}
 	wp_localize_script( 'mtx-navigation','mtxScreenReaderText', array(
 		'expand' => __( 'Expand child menu', 'mtx' ),

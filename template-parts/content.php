@@ -49,7 +49,6 @@ $mtxCaption = $mtxAltImages['caption'];
 		<?php if( is_singular() ): ?>
 				<li><?php echo $mtxNotes; ?></li>
 			</ul>
-		
 			<?php if( !empty($mtxAltImages) ):
 				foreach( $mtxAltImages as $mtxAltImage ): ?>	 
 				<aside id="accordion">

@@ -287,6 +287,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: .75em;
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
 	clear: both;
+	text-transform: capitalize;
 }
 
 h1 {
@@ -691,6 +692,11 @@ a:hover, a:active {
 	margin: 0 auto;
 }
 
+header.mtx-archive {
+	max-width: 0px;
+	max-height: 0px;
+}
+
 @media screen and (min-width: 900px) {
 	.has-sidebar .hentry {
 		display: -webkit-box;
@@ -751,7 +757,7 @@ a:hover, a:active {
 	padding: .25em 1em;
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	color: #fff;
-	background-color: #32425a;
+	background-color: indigo;
 }
 
 @media screen and (min-width: 600px) {
@@ -1026,14 +1032,23 @@ button.dropdown-toggle {
 	color: white;
 }
 
+h1.mtx-archive {
+	position: relative;
+	left: -9999px;
+}
+
+h2.entry-title a {
+	font-size: 1em;
+}
+
 .entry-title {
 	margin: .125em 0 .25em;
-	font-size: 2.5em;
+	font-size: 1em;
 }
 
 @media screen and (min-width: 900px) {
 	.entry-title {
-		font-size: 3em;
+		font-size: 1em;
 	}
 }
 
@@ -1162,7 +1177,7 @@ button.dropdown-toggle {
 ## Footer
 --------------------------------------------------------------*/
 footer {
-	background-color: #32425a;
+	background-color: indigo;
 }
 
 footer nav {
@@ -1397,7 +1412,7 @@ object {
 --------------------------------------------------------------*/
 .featured-cropped {
 	width: 25%;
-	background-color: #32425a;
+	background-color: #f1f1f1;
 }
 
 .featured-cropped img {
