@@ -6,15 +6,7 @@
  *
  * @package My_Tix
  */
-$mtxVenueUrl = get_field('venue_url');
-$mtxVenue = get_field('venue_plain_text');
-$mtxDate = get_field('date_on_ticket');
-$mtxNotes = get_field('notes');
-$mtxAltImages = get_field('alternate_image');
-echo $mtxAltImages['sizes']['full'];
-echo $mtxAltImages['sizes']['medium']; //This is the medium image
-echo $mtxAltImages['sizes']['thumbnail']; //This is the thumbnail image
-$mtxCaption = $mtxAltImages['caption'];
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -39,29 +31,10 @@ $mtxCaption = $mtxAltImages['caption'];
 
 		if ( 'post' === get_post_type() || 'movies' === get_post_type() || 'live_events' === get_post_type() || 'attractions' === get_post_type() || 'sundry' === get_post_type()) : ?>
 		<div class="entry-meta">
-		<ul class="ticket-meta-primary">
-		<?php if(!$mtxVenueUrl) {?>
-			<li><?php echo $mtxVenue; ?></li>
-		<?php } else { ?>
-			<li><a href="<?php echo $mtxVenueUrl; ?>" rel="external" target="_self"><?php echo $mtxVenue; ?></a></li>
-		<?php } ?>
-			<li><?php echo $mtxDate; ?></li>
-		<?php if( is_singular() ): ?>
-				<li><?php echo $mtxNotes; ?></li>
-			</ul>
-			<?php if( !empty($mtxAltImages) ):
-				foreach( $mtxAltImages as $mtxAltImage ): ?>	 
-				<aside id="accordion">
-					<h3>Additional image/ephemera</h3>
-					<div>
-						<img src="<?php echo $mtxAltImage['sizes']['thumbnail']; ?>" alt="<?php echo get_the_title(get_field( $mtxAltImage ));?> related image"/>
-						<b><small><?php echo $mtxAltImage['caption']; ?></small></b>
-					</div> 
-				</aside>	
-				<?php endforeach; 
-			endif;
-		endif; ?>     
-		</ul>  
+	
+		<?php	//endif;
+		//endif; ?>     
+	
  <?php  //mtx_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php

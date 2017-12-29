@@ -596,7 +596,7 @@ a:hover, a:active {
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
+	background-color: #ffffff;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
@@ -1032,13 +1032,74 @@ button.dropdown-toggle {
 	color: white;
 }
 
-h1.mtx-archive {
-	position: relative;
-	left: -9999px;
+.cat-links-archive {
+	outline: 1px solid red;
+	color: red;
+}
+
+.mtx-category-slat {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+}
+
+.mtx-cat svg {
+	color: #000;
+	font-size: 2em;
+}
+
+.bg-movie {
+	background-color: #76f112;
+}
+
+@media screen and (min-width: 600px) {
+	.card-meta {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1 0 auto;
+		        flex: 1 0 auto;
+		max-width: 100%;
+	}
+	.mtx-category-slat {
+		padding: 4px 4px;
+	}
+	.mtx-title {
+		background: #ccc;
+		-webkit-box-flex: inherit;
+		    -ms-flex-positive: inherit;
+		        flex-grow: inherit;
+		text-align: center;
+	}
+}
+
+header.mtx-archive, .mtx-tiles footer {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+
+h1.entry-title {
+	text-align: left;
+	background-color: #fff;
+	padding-left: 2%;
 }
 
 h2.entry-title a {
-	font-size: 1em;
+	font-size: .75em;
 }
 
 .entry-title {
@@ -1059,6 +1120,22 @@ h2.entry-title a {
 
 .entry-title a:focus, .entry-title a:hover {
 	border-bottom: 5px solid #b51c35;
+}
+
+article.movies {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.mtx-tiles article.movies {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
 }
 
 .entry-meta,
@@ -1160,6 +1237,19 @@ h2.entry-title a {
 .entry-footer {
 	margin: 1.5em 0;
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+section.mtx-tiles {
+	width: 100%;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: (minmax(23%, 1fr))[auto-fit];
+	    grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	grid-gap: 4px;
+	outline: 2px solid red;
 }
 
 /*--------------------------------------------------------------
@@ -1411,13 +1501,15 @@ object {
 ## Figures > image
 --------------------------------------------------------------*/
 .featured-cropped {
-	width: 25%;
-	background-color: #f1f1f1;
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	max-height: 125px;
+	overflow-y: hidden;
 }
 
 .featured-cropped img {
-	-webkit-mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/contain no-repeat;
-	        mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/contain no-repeat;
+	-webkit-mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 0%/contain no-repeat;
+	        mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 0%/contain no-repeat;
 }
 
 /*# sourceMappingURL=../mtx/sass/maps/style.css.map */

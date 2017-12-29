@@ -177,9 +177,12 @@ function mtx_scripts() {
 	wp_enqueue_style( 'mtx-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'mtx-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20170712', true );
-
+	
+	wp_enqueue_script( 'mtx-fa', get_template_directory_uri() . '/js/fontawesome-all.js' );
+	
 	wp_enqueue_script( 'mtx-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
 	
+	//this relates to the accordion widget in single post views
 	if ( is_singular() ) {
 
 		wp_enqueue_style( 'mtx-jquery-ui-css', get_template_directory_uri() . '/js/jquery/jquery-ui.min.css');
