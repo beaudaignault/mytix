@@ -11,9 +11,18 @@
 	max-width: $size__max-width;
 	margin: 0 auto;
 }
+div#comments {
+    max-width: $size__max-width;
+    margin: 0 auto;
+}
 header.mtx-archive {
 	max-width: 0px;
 	max-height: 0px;
+}
+div#respond {
+	width: 90%;
+	max-width: 100%;
+	margin: .5em 2em .5em 2em;
 }
 @media screen and (min-width: $query__medium) {
 	.has-sidebar {		
@@ -37,6 +46,10 @@ header.mtx-archive {
 			}
 		}
 		
+	}
+	div#respond {
+		width: 44%;
+		margin: 0 0;
 	}
 }
 

@@ -101,8 +101,8 @@ endif;
 function mtx_the_category_list() {
 	 /* translators: used between list items, there is a space after the comma */
 	$categories_list = get_the_category_list( esc_html__( ', ', 'mtx' ) );
-	if  ($categories_list) {
-		printf( '<span class="cat-links">' . esc_html__( 'A %1$s Ticket', 'mtx' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+	if  (!is_single() && $categories_list) {
+		printf( '<span class="cat-links">' . esc_html__( '%1$s Ticket', 'mtx' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 	}
 }
 

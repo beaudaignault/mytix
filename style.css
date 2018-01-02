@@ -692,9 +692,20 @@ a:hover, a:active {
 	margin: 0 auto;
 }
 
+div#comments {
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
 header.mtx-archive {
 	max-width: 0px;
 	max-height: 0px;
+}
+
+div#respond {
+	width: 90%;
+	max-width: 100%;
+	margin: .5em 2em .5em 2em;
 }
 
 @media screen and (min-width: 900px) {
@@ -719,6 +730,10 @@ header.mtx-archive {
 	}
 	.has-sidebar .hentry .widget-area {
 		width: 30%;
+	}
+	div#respond {
+		width: 44%;
+		margin: 0 0;
 	}
 }
 
@@ -1056,6 +1071,18 @@ button.dropdown-toggle {
 	background-color: #76f112;
 }
 
+.bg-sundry {
+	background-color: #f16b12;
+}
+
+.bg-attractions {
+	background-color: #62e9f3;
+}
+
+.bg-live {
+	background-color: #ee79de;
+}
+
 @media screen and (min-width: 600px) {
 	.card-meta {
 		display: -webkit-box;
@@ -1081,7 +1108,7 @@ button.dropdown-toggle {
 	}
 }
 
-header.mtx-archive, .mtx-tiles footer {
+header.mtx-archive, .mtx-tiles footer, .attractions-cat header {
 	position: absolute;
 	overflow: hidden;
 	clip: rect(0 0 0 0);
@@ -1110,6 +1137,7 @@ h2.entry-title a {
 @media screen and (min-width: 900px) {
 	.entry-title {
 		font-size: 1em;
+		line-height: 96%;
 	}
 }
 
@@ -1136,6 +1164,7 @@ article.movies {
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
+	margin-bottom: -10px;
 }
 
 .entry-meta,
@@ -1249,7 +1278,7 @@ section.mtx-tiles {
 	-ms-flex-align: start;
 	align-items: flex-start;
 	grid-gap: 4px;
-	outline: 2px solid red;
+	outline: 2px solid #00ff15;
 }
 
 /*--------------------------------------------------------------
@@ -1267,7 +1296,7 @@ section.mtx-tiles {
 ## Footer
 --------------------------------------------------------------*/
 footer {
-	background-color: indigo;
+	background-color: #fff;
 }
 
 footer nav {

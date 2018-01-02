@@ -1,0 +1,14 @@
+
+.featured-cropped {
+    
+    background-color: $color__background-screen;
+    background-repeat: no-repeat;
+    max-height: 125px;
+    overflow-y: hidden;
+    
+}
+    
+.featured-cropped img{
+    mask: url(assets/images/svg/ticket.svg#ticket-shape)50% 0% / contain no-repeat;
+}
+ 
