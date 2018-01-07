@@ -177,18 +177,18 @@ function mtx_scripts() {
 	wp_enqueue_style( 'mtx-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'mtx-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20170712', true );
-	
+
 	wp_enqueue_script( 'mtx-fa', get_template_directory_uri() . '/js/fontawesome-all.js' );
-	
+
 	wp_enqueue_script( 'mtx-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
-	
+
 	//this relates to the accordion widget in single post views
 	if ( is_singular() ) {
 
 		wp_enqueue_style( 'mtx-jquery-ui-css', get_template_directory_uri() . '/js/jquery/jquery-ui.min.css');
 
 		wp_enqueue_script( 'mtx-jquery-ui', get_template_directory_uri() . '/js/jquery/jquery-ui.min.js', array('jquery'), '20151215', true );
-		
+
 		wp_enqueue_script( 'mtx-accordion-ui', get_template_directory_uri() . '/js/accordion-functions.js', array('jquery'), '20151215', true );
 	}
 	wp_localize_script( 'mtx-navigation','mtxScreenReaderText', array(
@@ -204,8 +204,7 @@ function mtx_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'mtx_scripts' );
 
-// adding daishicons to frontend
-//Enqueue the Dashicons script
+// adding dashicons to frontend
 add_action( 'wp_enqueue_scripts', 'mtx_dashicons_front_end' );
 function mtx_dashicons_front_end() {
 wp_enqueue_style( 'dashicons' );

@@ -27,7 +27,6 @@ get_header();
 			endif;
 
 		endwhile; // End of the loop.
-		//wp_reset_postdata();
 		?>
 
 		</main><!-- #main -->

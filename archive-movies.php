@@ -8,12 +8,6 @@
  */
 
 get_header();
-// $args = array(
-// 	'posts_per_page' => 1,
-// 	'post_type' => 'movies',
-// );
-// $mtxMovies = new WP_Query( $args );
-
 ?>
 
 	<div id="primary" class="content-area">
@@ -25,7 +19,6 @@ get_header();
 			<header class="page-header mtx-archive">
 				<?php
 					the_archive_title( '<h1 class="page-title mtx-archive">', '</h1>' );
-					// the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
  

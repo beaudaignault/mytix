@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: My Tix
 Theme URI: http://underscores.me/
@@ -323,7 +324,22 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	position: relative;
+	margin: 0 0 1em;
+	background: #eee;
+	padding: 1em 2em .5em 5em;
+	font-style: italic;
+}
+
+blockquote:before {
+	position: absolute;
+	top: -.2em;
+	left: -.13em;
+	content: "“";
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	font-size: 12em;
+	line-height: 100%;
+	color: red;
 }
 
 address {
@@ -690,6 +706,7 @@ a:hover, a:active {
 .site-content {
 	max-width: 1080px;
 	margin: 0 auto;
+	background-color: #2e2430;
 }
 
 div#comments {
@@ -1108,7 +1125,9 @@ button.dropdown-toggle {
 	}
 }
 
-header.mtx-archive, .mtx-tiles footer, .attractions-cat header {
+header.mtx-archive,
+.mtx-tiles footer,
+.attractions-cat header {
 	position: absolute;
 	overflow: hidden;
 	clip: rect(0 0 0 0);
@@ -1150,7 +1169,7 @@ h2.entry-title a {
 	border-bottom: 5px solid #b51c35;
 }
 
-article.movies {
+article.movies, article.live_events, article.attractions, article.sundry {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
@@ -1160,11 +1179,12 @@ article.movies {
 	display: flex;
 }
 
-.mtx-tiles article.movies {
+.mtx-tiles article.movies, .mtx-tiles article.live_events, .mtx-tiles article.attractions, .mtx-tiles article.sundry {
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	margin-bottom: -10px;
+	background-color: #2e2430;
 }
 
 .entry-meta,
@@ -1530,15 +1550,17 @@ object {
 ## Figures > image
 --------------------------------------------------------------*/
 .featured-cropped {
-	background-color: #ffffff;
+	background-color: #2e2430;
 	background-repeat: no-repeat;
 	max-height: 125px;
+	min-height: 125px;
 	overflow-y: hidden;
 }
 
 .featured-cropped img {
 	-webkit-mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 0%/contain no-repeat;
 	        mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 0%/contain no-repeat;
+	min-height: 125px;
 }
 
 /*# sourceMappingURL=../mtx/sass/maps/style.css.map */

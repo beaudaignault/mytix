@@ -10,6 +10,8 @@
 .site-content {
 	max-width: $size__max-width;
 	margin: 0 auto;
+	background-color: $color__bg-article;
+
 }
 div#comments {
     max-width: $size__max-width;

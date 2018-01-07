@@ -15,7 +15,7 @@ $mtxAltImages = get_field('alternate_image');
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <!-- check if the post or page has a Featured Image assigned to it. -->
-<?php if ( has_post_thumbnail() && is_singular() ) { ?>
+<?php if ( has_post_thumbnail() && is_singular() && ! is_front_page() ) { ?>
    <figure class="featured-single">
 		<?php the_post_thumbnail();?>
 	</figure>
@@ -26,19 +26,19 @@ $mtxAltImages = get_field('alternate_image');
 <?php } ?>
 
 <header class="entry-header">
-<?php if (!is_singular() ) :?>
+<?php if (! is_singular() || is_front_page() ) :?>
 <div class="card-meta bg-movie">
 	   <div class="mtx-category-slat">
 		   <div class="mtx-cat">
 				   <b class="fa fa-microphone"></b>
-				   <?php if(is_singular()): mtx_the_category_list();
+				   <?php if(is_singular() && ! is_front_page()): mtx_the_category_list();
 						   endif; ?>
 		   </div>
 	   </div><!-- .mtx-category-slat -->
 <?php endif; ?>
 	   <div class="mtx-title">
 	   <?php
-		   if ( is_singular() ) :
+		   if ( is_singular() && ! is_front_page() ) :
 			   the_title( '<h1 class="entry-title">', '</h1>' );
 		   else :
 			   the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -50,7 +50,7 @@ $mtxAltImages = get_field('alternate_image');
    <div class="entry-meta">
    <ul class="ticket-meta-primary">
    <?php 
-	   if( is_singular() ): ?>
+	   if( is_singular() && ! is_front_page() ): ?>
 	   <?php if(!$mtxVenueUrl) {?>
 		   <li><?php echo $mtxVenue; ?></li>
 	   <?php } else { ?>
@@ -92,7 +92,7 @@ $mtxAltImages = get_field('alternate_image');
 			   <img src="assets/images/svg-icons/movies.svg" alt="movie icon"/>
 		   </div>
 		   <div class="mtx-cat">
-				   <?php mtx_the_category_list(); ?>
+				   <?php //mtx_the_category_list(); ?>
 		   </div>
 	   </div><!-- .mtx-category-slat -->
 <?php endif; ?>
