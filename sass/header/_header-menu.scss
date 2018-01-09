@@ -62,9 +62,14 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		// background-color: lightblue;
+		background-color: lightblue;
 	}
-	
+	.current-menu-item {
+		background-color: lightblue;
+	}
+	li.menu-item-movies > a{
+		background-color: $color__bg-movie;
+	}
 	.menu-item-has-children,
 	.page-item-has-children {
 		min-width: 218px;
