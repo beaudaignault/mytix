@@ -237,6 +237,11 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
+ * Custom functions that act independently of the theme templates.
+ */
+//require get_template_directory() . '/inc/extras.php'; // On hold... 
+
+/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';

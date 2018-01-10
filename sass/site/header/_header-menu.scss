@@ -1,162 +1,207 @@
 .main-navigation {
-	display: block;
-	font-family: $font__headings;
-	font-weight: 400;
-	clear: left;
-	align-self: center;
-	
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-top: 1em;
-		padding-left: 0;
-
-		ul {
-			display: none;
-			top: 1.5em;
-			z-index: 99999;
-
-			ul {
-				top: 0;
-			}
-
-			li {
-				padding-left: 1em;
-				
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		position: relative;
-	}
-
-	a {
-		display: inline-block;
-		width: 100%;
-		padding: .5em 1em .5em 0;
-		text-decoration: none;
-		text-transform: capitalize;
-		color: #fff;
-	}
-	
-	a:hover,
-	a:focus {
-		text-decoration: underline;
-		background-color: orangered;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-		background-color: rgb(38, 100, 119);
-	}
-	
-	.menu-item-has-children,
-	.page-item-has-children {
-		min-width: 218px;
-	}
-	.menu-item-has-children > a,
-	.page_item_has_children > a {
-		padding-right: 2em;
-	}
+  display: block;
+  font-family: $font__headings;
+  font-weight: 400;
+  clear: left;
+  align-self: center;
+  ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-top: 1em;
+    padding-left: 0;
+    ul {
+      display: none;
+      top: 1.5em;
+      z-index: 99999;
+      ul {
+        top: 0;
+      }
+      li {
+        padding-left: 1em;
+        &:hover>ul,
+        &.focus>ul {
+          left: 100%;
+        }
+      }
+      a {
+        width: 200px;
+      }
+    }
+    li:hover>ul,
+    li.focus>ul {
+      left: auto;
+    }
+  }
+  li {
+    position: relative;
+  }
+  a {
+    display: inline-block;
+    width: 100%;
+    padding: .5em 1em .5em 0;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: underline; // background-color: orangered;
+  }
+  .current_page_item>a,
+  .current-menu-item>a,
+  .current_page_ancestor>a,
+  .current-menu-ancestor>a {
+    background-color: rgb(38, 100, 119);
+  }
+  .menu-item-has-children,
+  .page-item-has-children {
+    min-width: 218px;
+  }
+  .menu-item-has-children>a,
+  .page_item_has_children>a {
+    padding-right: 2em;
+  }
 }
 
 button.dropdown-toggle {
-	position: absolute;
-	right: 0;
-	border: none;
-	background: inherit;
-	color: white;
-	line-height: 1.5em;
-	padding: .4em 1em .4em .5em;
+  position: absolute;
+  right: 0;
+  border: none;
+  background: inherit;
+  color: white;
+  line-height: 1.5em;
+  padding: .4em 1em .4em .5em;
 }
 
 .menu-toggle {
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: block;
-	margin: 1.2em 1.2em 0 0;
-	padding: .6em .8em;
-	font-size: 80%;
-	text-transform: uppercase;
-	color: white;
-	border: 1px solid hsla(0, 0%, 100%, .3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  margin: 1.2em 1.2em 0 0;
+  padding: .6em .8em;
+  font-size: 80%;
+  text-transform: uppercase;
+  color: white;
+  border: 1px solid hsla(0, 0%, 100%, .3);
 }
 
+
 /* Toggle small menu and sub-menus on */
+
 .toggled-on ul,
 .sub-menu.toggled-on {
-	display: block;
+  display: block;
 }
 
 @media screen and (min-width: $query__small) {
-	.menu-toggle {
-		display: none;
-	}
-	
-	.main-navigation {
-		
-		.menu-item-has-children > a,
-		.page_item_has_children > a {
-			padding-right: 2em;
-			background: hsla(0, 0%, 100%, .1);
-		}
-		
-		ul {
-			display: block;
-			display: flex;
-			flex-wrap: wrap;
-			
-			ul {
-				flex-direction: column;
-				background: hsla(0, 0%, 100%, .1);
-				margin-left: 0;
-
-				li {
-					padding-left: 0;
-					
-					a {
-						width: 218px;
-						background: none;
-					}
-				}
-			}
-			
-			li {
-					
-				a {
-					padding: .4em 1em; 
-				}
-			}
-		}
-		
-	}
+  .menu-toggle {
+    display: none;
+  }
+  .main-navigation {
+    .menu-item-has-children>a,
+    .page_item_has_children>a {
+      padding-right: 2em;
+      background: hsla(0, 0%, 100%, .1);
+    }
+    ul {
+      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      ul {
+        flex-direction: column;
+        background: hsla(0, 0%, 100%, .1);
+        margin-left: 0;
+        li {
+          padding-left: 0;
+          a {
+            width: 218px;
+            background: none;
+          }
+        }
+      }
+      li {
+        a {
+          padding: .4em 1em;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: $query__medium) {
-	.main-navigation {
-		
-		ul {
-			justify-content: flex-end;
-			padding-top: 0;
-		}
-		
-	}
+  .main-navigation {
+    ul {
+      justify-content: flex-end;
+      padding-top: 0;
+    }
+  }
+}
+
+.active {
+  // background-color: aqua;
+  a {
+    color: rgb(252, 249, 249);
+    text-shadow: rgba(24, 24, 24, .25) -1px 1px;
+  }
+}
+
+li.menu-item-movies.active {
+  background-color: $color__bg-movie;
+  mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+  mask-clip: content-box;
+}
+
+li.menu-item-attractions.active {
+  background-color: $color__bg-attractions;
+  mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+  mask-clip: content-box;
+}
+
+li.menu-item-live-events.active {
+  background-color: $color__bg-live;
+  mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+  mask-clip: content-box;
+}
+
+li.menu-item-sundry.active {
+  background-color: $color__bg-sundry;
+  mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+  mask-clip: content-box;
+}
+
+li.menu-item-movies {
+  background-color: $color__bg-movie;
+  a:hover,
+  a:focus {
+    mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+    mask-clip: content-box;
+  }
+}
+
+li.menu-item-attractions {
+  background-color: $color__bg-attractions;
+  a:hover,
+  a:focus {
+    mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+    mask-clip: content-box;
+  }
+}
+
+li.menu-item-live-events {
+  background-color: $color__bg-live;
+  a:hover,
+  a:focus {
+    mask-clip: content-box;
+  }
+}
+
+li.menu-item-sundry {
+  background-color: $color__bg-sundry;
+  a:hover,
+  a:focus {
+    mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+    mask-clip: content-box;
+  }
 }

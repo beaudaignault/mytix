@@ -16,7 +16,7 @@
         'font-style': 'italic',
         'margin-top': '4px',
         'color':'darkslategrey'
-      })
+      });
     }
  
   });  

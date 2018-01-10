@@ -938,7 +938,6 @@ div#respond {
 .main-navigation a:hover,
 .main-navigation a:focus {
 	text-decoration: underline;
-	background-color: orangered;
 }
 
 .main-navigation .current_page_item > a,
@@ -1031,6 +1030,89 @@ button.dropdown-toggle {
 		        justify-content: flex-end;
 		padding-top: 0;
 	}
+}
+
+.active a {
+	color: #fcf9f9;
+	text-shadow: rgba(24, 24, 24, 0.25) -1px 1px;
+}
+
+li.menu-item-movies.active {
+	background-color: #76f112;
+	-webkit-mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+	        mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+	-webkit-mask-clip: content-box;
+	        mask-clip: content-box;
+}
+
+li.menu-item-attractions.active {
+	background-color: #62e9f3;
+	-webkit-mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+	        mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+	-webkit-mask-clip: content-box;
+	        mask-clip: content-box;
+}
+
+li.menu-item-live-events.active {
+	background-color: #ee79de;
+	-webkit-mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+	        mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+	-webkit-mask-clip: content-box;
+	        mask-clip: content-box;
+}
+
+li.menu-item-sundry.active {
+	background-color: #f16b12;
+	-webkit-mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+	        mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+	-webkit-mask-clip: content-box;
+	        mask-clip: content-box;
+}
+
+li.menu-item-movies {
+	background-color: #76f112;
+}
+
+li.menu-item-movies a:hover,
+li.menu-item-movies a:focus {
+	-webkit-mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+	        mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+	-webkit-mask-clip: content-box;
+	        mask-clip: content-box;
+}
+
+li.menu-item-attractions {
+	background-color: #62e9f3;
+}
+
+li.menu-item-attractions a:hover,
+li.menu-item-attractions a:focus {
+	-webkit-mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+	        mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+	-webkit-mask-clip: content-box;
+	        mask-clip: content-box;
+}
+
+li.menu-item-live-events {
+	background-color: #ee79de;
+}
+
+li.menu-item-live-events a:hover,
+li.menu-item-live-events a:focus {
+	-webkit-mask-clip: content-box;
+	        mask-clip: content-box;
+}
+
+li.menu-item-sundry {
+	background-color: #f16b12;
+}
+
+li.menu-item-sundry a:hover,
+li.menu-item-sundry a:focus {
+	-webkit-mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+	        mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
+	-webkit-mask-clip: content-box;
+	        mask-clip: content-box;
 }
 
 /*--------------------------------------------------------------

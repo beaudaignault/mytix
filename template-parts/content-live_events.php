@@ -27,7 +27,7 @@ $mtxAltImages = get_field('alternate_image');
 
 <header class="entry-header">
 <?php if (! is_singular() || is_front_page() ) :?>
-<div class="card-meta bg-movie">
+<div class="card-meta bg-live">
 	   <div class="mtx-category-slat">
 		   <div class="mtx-cat">
 				   <b class="fa fa-microphone"></b>
