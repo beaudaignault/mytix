@@ -11,7 +11,9 @@
 	max-width: $size__max-width;
 	margin: 0 auto;
 	background-color: $color__bg-article;
-
+}
+.home .site-content, .post-type-archive-movies .site-content,  .post-type-archive-live-events .site-content,  .post-type-archive-attractions .site-content,  .post-type-archive-sundry .site-content {
+	background-color: $color__bg-article-archive;
 }
 div#comments {
     max-width: $size__max-width;

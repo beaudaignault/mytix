@@ -39,7 +39,7 @@ $mtxAltImages = get_field('alternate_image');
 			<div class="mtx-title">
 			<?php
 				if ( is_singular() && ! is_front_page() ) :
-					the_title( '<h1 class="entry-title">', '</h1>' );
+					the_title( '<h1 class="entry-title"><b class="fas fa-film"></b> ', '</h1>' );
 				else :
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				endif;?>
@@ -52,13 +52,14 @@ $mtxAltImages = get_field('alternate_image');
 		<?php 
 			if( is_singular() && ! is_front_page()): ?>
 			<?php if(!$mtxVenueUrl) {?>
-				<li><?php echo $mtxVenue; ?></li>
+				<li><b class="fa fa-globe" aria-hidden="true"></b><?php echo $mtxVenue; ?></li>
 			<?php } else { ?>
 				<li><a href="<?php echo $mtxVenueUrl; ?>" rel="external" target="_self"><?php echo $mtxVenue; ?></a></li>
 			<?php } ?>
-				<li><?php echo $mtxDate; ?></li>
-
-				<li><?php echo $mtxNotes; ?></li>
+				<li><b class="fa fa-calendar" aria-hidden="true"></b><?php echo $mtxDate; ?></li>
+			<?php if( !empty($mtxAltImages) ):?>
+				<li><b class="fa fa-info-circle" aria-hidden="true"></b><?php echo $mtxNotes; ?></li>
+			<?php endif; ?>
 			</ul>
 			<?php if( !empty($mtxAltImages) ):
 					// vars

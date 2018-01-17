@@ -67,10 +67,14 @@
     padding: 4px 4px; // background: rgb(187, 228, 8);
   }
   .mtx-title {
-    background: $color__background-hr;
-    flex-grow: inherit;
+    -webkit-box-flex: inherit;
+    -ms-flex-positive: inherit;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-  }
+    justify-content: center;
+    margin: 0 auto;
+    }
 }
 
 header.mtx-archive,
@@ -88,8 +92,14 @@ header.mtx-archive,
 
 h1.entry-title {
   text-align: left;
-  background-color: $color__background-body;
-  padding-left: 2%;
+  background-color: $color__background-screen;
+  // padding-left: 2%;
+}
+h1.entry-title svg.fa-film.fa-w-16 {
+  background-color: $color__bg-movie;
+  padding: 2px;
+  line-height: 1.2;
+  font-size: 1.3em;
 }
 
 h2.entry-title a {

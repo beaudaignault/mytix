@@ -43,6 +43,8 @@
     text-decoration: none;
     text-transform: capitalize;
     color: #fff;
+    text-shadow: rgba(24, 24, 24, .25) -1px 1px;
+
   }
   a:hover,
   a:focus {
@@ -149,34 +151,29 @@ button.dropdown-toggle {
 
 li.menu-item-movies.active {
   background-color: $color__bg-movie;
-  mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
-  mask-clip: content-box;
+  mask: url(assets/images/svg/mtx-ticket-verticle.svg#ticket-shape) 0px, 0px;
 }
 
 li.menu-item-attractions.active {
   background-color: $color__bg-attractions;
-  mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
-  mask-clip: content-box;
+  mask: url(assets/images/svg/mtx-ticket-verticle.svg#ticket-shape) 0px, 0px;
 }
 
 li.menu-item-live-events.active {
   background-color: $color__bg-live;
-  mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
-  mask-clip: content-box;
+  mask: url(assets/images/svg/mtx-ticket-verticle.svg#ticket-shape) 0px, 0px;
 }
 
 li.menu-item-sundry.active {
   background-color: $color__bg-sundry;
-  mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
-  mask-clip: content-box;
+  mask: url(assets/images/svg/mtx-ticket-verticle.svg#ticket-shape) 0px, 0px;
 }
 
 li.menu-item-movies {
   background-color: $color__bg-movie;
   a:hover,
   a:focus {
-    mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
-    mask-clip: content-box;
+    mask: url(assets/images/svg/mtx-ticket-verticle.svg#ticket-shape) 0px, 0px;
   }
 }
 
@@ -184,8 +181,7 @@ li.menu-item-attractions {
   background-color: $color__bg-attractions;
   a:hover,
   a:focus {
-    mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
-    mask-clip: content-box;
+    mask: url(assets/images/svg/mtx-ticket-verticle.svg#ticket-shape) 0px 0px;
   }
 }
 
@@ -193,7 +189,7 @@ li.menu-item-live-events {
   background-color: $color__bg-live;
   a:hover,
   a:focus {
-    mask-clip: content-box;
+    mask: url(assets/images/svg/mtx-ticket-verticle.svg#ticket-shape) 0px, 0px;
   }
 }
 
@@ -201,7 +197,6 @@ li.menu-item-sundry {
   background-color: $color__bg-sundry;
   a:hover,
   a:focus {
-    mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 50%/cover no-repeat;
-    mask-clip: content-box;
+    mask: url(assets/images/svg/mtx-ticket-verticle.svg#ticket-shape) 0px, 0px;
   }
 }
