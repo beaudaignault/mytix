@@ -3,7 +3,7 @@
 }
 
 .hentry {
-  margin: 0 0 1.5em;
+  margin: 0 0 .25em;
 }
 
 .entry-header {
@@ -93,7 +93,6 @@ header.mtx-archive,
 h1.entry-title {
   text-align: left;
   background-color: $color__background-screen;
-  // padding-left: 2%;
 }
 h1.entry-title svg.fa-film.fa-w-16 {
   background-color: $color__bg-movie;
@@ -251,5 +250,8 @@ section.mtx-tiles {
 @media screen and (min-width: $query__medium) {
   main#main.site-main {
     // background-color: $color__bg-article;
+  }
+  body.single h1.entry-title {
+    margin-left: 1.67em;
   }
 }

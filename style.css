@@ -406,7 +406,6 @@ hr {
 
 ul.ticket-meta-primary {
 	margin: 0 0 0 0;
-	padding-left: 1.2em;
 	color: darkslategrey;
 }
 
@@ -440,6 +439,10 @@ dd {
 	margin: 0 1.5em 1.5em;
 }
 
+.ticket-meta-list {
+	background-color: aqua;
+}
+
 img {
 	height: auto;
 	/* Make sure images are scaled correctly. */
@@ -450,6 +453,13 @@ img {
 figure {
 	margin: 0;
 	/* Extra wide images within figure tags don't overflow the content area. */
+}
+
+.ticket-meta-primary svg.svg-inline--fa {
+	margin-right: 0.5em;
+	margin-left: 0;
+	height: 1em;
+	width: 1em;
 }
 
 table {
@@ -1114,7 +1124,7 @@ li.menu-item-sundry a:focus {
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0 0 .25em;
 }
 
 .entry-header {
@@ -1389,6 +1399,12 @@ section.mtx-tiles {
 	outline: 2px solid #00ff15;
 }
 
+@media screen and (min-width: 900px) {
+	body.single h1.entry-title {
+		margin-left: 1.67em;
+	}
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1649,6 +1665,11 @@ object {
 	-webkit-mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 0%/contain no-repeat;
 	        mask: url(assets/images/svg/ticket.svg#ticket-shape) 50% 0%/contain no-repeat;
 	min-height: 125px;
+}
+
+.fig-style {
+	display: inline-block;
+	height: auto;
 }
 
 /*# sourceMappingURL=../mtx/sass/maps/style.css.map */

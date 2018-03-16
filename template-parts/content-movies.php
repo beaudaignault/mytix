@@ -52,16 +52,16 @@ $mtxAltImages = get_field('alternate_image');
 		<?php 
 			if( is_singular() && ! is_front_page()): ?>
 			<?php if(!$mtxVenueUrl) {?>
-				<li><b class="fa fa-globe" aria-hidden="true"></b><?php echo $mtxVenue; ?></li>
+				<li><span class="ticket-meta-list"><?php echo $mtxVenue;?></span></li>
 			<?php } else { ?>
-				<li><a href="<?php echo $mtxVenueUrl; ?>" rel="external" target="_self"><?php echo $mtxVenue; ?></a></li>
+				<li><b class="fa fa-link" aria-hidden="true"></b><a href="<?php echo $mtxVenueUrl; ?>" rel="external" target="_self"><span class="ticket-meta-list"><?php echo $mtxVenue;?></a></li>
 			<?php } ?>
-				<li><b class="fa fa-calendar" aria-hidden="true"></b><?php echo $mtxDate; ?></li>
-			<?php if( !empty($mtxAltImages) ):?>
-				<li><b class="fa fa-info-circle" aria-hidden="true"></b><?php echo $mtxNotes; ?></li>
+				<li><b class="fa fa-calendar" aria-hidden="true"></b><span class="ticket-meta-list"><?php echo $mtxDate;?></span></li>
+			<?php if( !empty($mtxNotes) ):?>
+				<li><b class="fa fa-info-circle" aria-hidden="true"></b><span class="ticket-meta-list"><?php echo $mtxNotes; ?></span></li>
 			<?php endif; ?>
 			</ul>
-			<?php if( !empty($mtxAltImages) ):
+			<?php if( ! empty($mtxAltImages) ):
 					// vars
 					$url = $mtxAltImages['url'];
 					$title = $mtxAltImages['title'];
@@ -74,16 +74,16 @@ $mtxAltImages = get_field('alternate_image');
 					$height = $mtxAltImages['sizes'][ $size . '-height' ];?>
 				<aside id="accordion">
 					<h3>Additional image/ephemera</h3>
-					<div>
+					<figure>
 						<img src="<?php echo $thumb; ?>" alt="<?php echo $alt;?> related image"/>
 						<?php if( $caption );?>
-							<b><small><?php echo $caption; ?></small></b>
+							<figcaption><b><small><?php echo $caption; ?></small></b></figcaption>
 						<?php endif; ?>
-					</div> 
+					</figure> 
 				</aside>	
 				<?php  
 				endif;
-			endif; ?>     
+				endif; ?>     
 		 
  <?php  //mtx_posted_on(); ?>
 		</div><!-- .entry-meta -->

@@ -29,5 +29,11 @@ img {
 figure {
 	margin: 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
+.ticket-meta-primary svg.svg-inline--fa {
+	margin-right: 0.5em;
+	margin-left: 0;
+	height:1em;
+	width:1em;
+}
 
 @import "tables";

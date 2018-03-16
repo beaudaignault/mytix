@@ -2,7 +2,7 @@
 
 ul.ticket-meta-primary {
 	margin: 0 0 0 0;
-	padding-left:1.2em;
+	// padding-left:1.2em;
 	color:darkslategrey;
  }
 ul, ol {
@@ -31,5 +31,9 @@ dt {
 
 dd {
 	margin: 0 1.5em 1.5em;
+}
+.ticket-meta-list {
+	// padding-left: 2em;
+	background-color: aqua;
 }
 

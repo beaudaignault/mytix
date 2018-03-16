@@ -18,6 +18,6 @@
         'color':'darkslategrey'
       });
     }
- 
-  });  
+  });
+  $('figure.ui-accordion-content').addClass('fig-style');  
 })(jQuery);
