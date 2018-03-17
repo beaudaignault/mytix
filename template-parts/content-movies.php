@@ -31,8 +31,6 @@ $mtxAltImages = get_field('alternate_image');
 			<div class="mtx-category-slat">
 				<div class="mtx-cat">
 						<b class="fas fa-film"></b>
-						<?php if(is_singular() && ! is_front_page()): mtx_the_category_list();
-								endif; ?>
 				</div>
 			</div><!-- .mtx-category-slat -->
 	<?php endif; ?>
@@ -52,7 +50,7 @@ $mtxAltImages = get_field('alternate_image');
 		<?php 
 			if( is_singular() && ! is_front_page()): ?>
 			<?php if(!$mtxVenueUrl) {?>
-				<li><span class="ticket-meta-list"><?php echo $mtxVenue;?></span></li>
+				<li><b class="fa fa-globe" aria-hidden="true"></b><span class="ticket-meta-list"><?php echo $mtxVenue;?></span></li>
 			<?php } else { ?>
 				<li><b class="fa fa-link" aria-hidden="true"></b><a href="<?php echo $mtxVenueUrl; ?>" rel="external" target="_self"><span class="ticket-meta-list"><?php echo $mtxVenue;?></a></li>
 			<?php } ?>
