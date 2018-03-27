@@ -1672,4 +1672,42 @@ object {
 	height: auto;
 }
 
+.mtx-crop {
+	background-color: aqua;
+	outline: 3px solid red;
+}
+
+figure.featured-single {
+	max-height: 600px;
+	overflow: hidden;
+}
+
+figure.featured-single a {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+
+figure.featured-single a img[height^="6"] {
+	-webkit-transform: scale(y);
+	        transform: scale(y);
+	height: 600px;
+	width: auto;
+	transition: width 1s, height 1s, -webkit-transform 1s;
+	transition: width 1s, height 1s, transform 1s;
+	transition: width 1s, height 1s, transform 1s, -webkit-transform 1s;
+	cursor: zoom-in;
+}
+
+figure.featured-single a img[height^="6"]:hover {
+	-webkit-transform: scale(y);
+	        transform: scale(y);
+	height: 900px;
+	width: auto;
+	transition: width 1s, height 1s, -webkit-transform 1s;
+	transition: width 1s, height 1s, transform 1s;
+	transition: width 1s, height 1s, transform 1s, -webkit-transform 1s;
+	cursor: zoom-in;
+}
+
 /*# sourceMappingURL=../mtx/sass/maps/style.css.map */

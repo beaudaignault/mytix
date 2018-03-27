@@ -18,4 +18,28 @@
     display: inline-block;
     height: auto;
 }
- 
+.mtx-crop {
+    background-color: aqua;
+    outline: 3px solid red;
+}
+figure.featured-single {
+    max-height: 600px;
+    overflow: hidden;
+}
+figure.featured-single a {
+    display: inline-flex;
+}
+figure.featured-single a img[height^="6"] {
+    transform:scale(y);
+    height: 600px;
+    width: auto;
+    transition: width 1s, height 1s, transform 1s; 
+    cursor: zoom-in;   
+}
+figure.featured-single a img[height^="6"]:hover {
+  transform:scale(y);
+    height: 900px ;  
+    width: auto;
+    transition: width 1s, height 1s, transform 1s;   
+    cursor: zoom-in; 
+}
