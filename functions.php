@@ -173,36 +173,25 @@ function mtx_scripts() {
 
 	//	Add Google fonts Roboto, and Open Sans.
 	wp_enqueue_style( 'mtx-fonts', mtx_fonts_url() );
-
 	wp_enqueue_style( 'mtx-style', get_stylesheet_uri() );
-
+	wp_enqueue_style( 'mtx-jquery-ui-css', get_template_directory_uri() . '/js/jquery/jquery-ui.min.css');
+	wp_enqueue_script( 'mtx-jquery-ui', get_template_directory_uri() . '/js/jquery/jquery-ui.min.js', array('jquery'), '20151215', true );
 	wp_enqueue_script( 'mtx-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20170712', true );
-
-	wp_enqueue_script( 'mtx-fa', get_template_directory_uri() . '/js/fontawesome-all.js' );
-
 	wp_enqueue_script( 'mtx-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
-
 	//this relates to the accordion widget in single post views
 	if ( is_singular() ) {
-
-		wp_enqueue_style( 'mtx-jquery-ui-css', get_template_directory_uri() . '/js/jquery/jquery-ui.min.css');
-
-		wp_enqueue_script( 'mtx-jquery-ui', get_template_directory_uri() . '/js/jquery/jquery-ui.min.js', array('jquery'), '20151215', true );
 		wp_enqueue_script(  'images_loaded', 'https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js', array('jquery'), true  );
-		// wp_enqueue_script( 'mtx-accordion-ui', get_template_directory_uri() . '/js/accordion-functions.js', array('jquery'), '20151215', true );
+		// wp_enqueue_script( 'mtx-accordion-ui', get_template_directory_uri() . '/js/accordion-functions.js', array('jquery'), '20151215', true );//need to fix RBD
 		wp_enqueue_script( 'mtx-manage-img-height', get_template_directory_uri() . '/js/tall.js', array('jquery'), '20151215', true );
 	}
 	wp_localize_script( 'mtx-navigation','mtxScreenReaderText', array(
 		'expand' => __( 'Expand child menu', 'mtx' ),
 		'collapse' => __( 'Collapse child menu', 'mtx' ),
 	));
-
 	wp_enqueue_script( 'mtx-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
 }
 add_action( 'wp_enqueue_scripts', 'mtx_scripts' );
 
@@ -254,4 +243,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

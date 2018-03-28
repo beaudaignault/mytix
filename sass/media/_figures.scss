@@ -22,24 +22,37 @@
     background-color: aqua;
     outline: 3px solid red;
 }
+.mtx-icon {
+background-image: url(assets/images/svg-icons/search-plus.svg);
+background-position-x: 0;
+background-position-y:0;
+background-repeat: no-repeat;
+background-size: 1.2em;
+background-origin: padding-box;
+
+}
 figure.featured-single {
+    position: relative;
     max-height: 600px;
     overflow: hidden;
+    padding-left: 1.2em;
+    
 }
-figure.featured-single a {
+figure.featured-single a.tall {
     display: inline-flex;
 }
-figure.featured-single a img[height^="6"] {
-    transform:scale(y);
+figure.featured-single a.tall img[height^="6"] {
+    // transform:scale(0.5);
     height: 600px;
     width: auto;
     transition: width 1s, height 1s, transform 1s; 
     cursor: zoom-in;   
 }
-figure.featured-single a img[height^="6"]:hover {
-  transform:scale(y);
+figure.featured-single a.tall img[height^="6"]:hover {
+  transform:scale(1);
+  transform-origin: top right;
     height: 900px ;  
     width: auto;
-    transition: width 1s, height 1s, transform 1s;   
+    transition: position 2s, width 1s, height 1s, transform 1s;   
     cursor: zoom-in; 
 }
